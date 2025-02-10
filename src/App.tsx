@@ -53,23 +53,37 @@
 //   )
 // }
 import './App.css'
-import Greeting from './Greeting'
-import Inner from './Inner'
-import jsondata from './data.json'
-
+import GreetClass from './GreetClass'
+import Login from './Login';
 function App()
 {
   return (
     <>
-    <div>App Component</div>
-    <Greeting name="Chitkara" years={10} data={jsondata[0]}/>
-    <Greeting name="CodeQuotient">
-        <Inner/>
-        
-      </Greeting>
+    {/* <GreetClass name="Code"/> */}
+    <Login/>
+    
 
-   
-       </>
+    </>
   )
 }
-export default App
+export default App;
+// import Greeting from './Greeting'
+// import Inner from './Inner'
+// import jsondata from './data.json'
+
+// function App()
+// {
+//   return (
+//     <>
+//     <div>App Component</div>
+//     <Greeting name="Chitkara" years={10} data={jsondata[0]}/>
+//     <Greeting name="CodeQuotient">
+//         <Inner/>
+        
+//       </Greeting>
+
+   
+//        </>
+//   )
+// }
+// export default App

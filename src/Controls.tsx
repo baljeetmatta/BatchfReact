@@ -9,7 +9,7 @@ const changeHandler=(e:ChangeEvent)=>{
 
 
 }
-const clickHandler=()=>{
+const clickHandler=(e:React.MouseEvent<HTMLButtonElement>,id:number)=>{
     alert(textData);
     textData="Done";
 
@@ -19,7 +19,7 @@ const Controls=()=>{
     return (
         <>
         <input type="text" onChange={changeHandler} />
-        <button onClick={()=>{alert('done')}}>Print</button>
+        <button onClick={(e)=>{clickHandler(e,1)}}>Print</button>
         </>
     )
 }
