@@ -52,7 +52,8 @@
 //     </>
 //   )
 // }
-import './App.css'
+//import './App.css'
+import Banner from './Banner';
 import GreetClass from './GreetClass'
 import Login from './Login';
 function App()
@@ -60,8 +61,8 @@ function App()
   return (
     <>
     {/* <GreetClass name="Code"/> */}
-    <Login/>
-    
+    {/* <Login/> */}
+    <Banner/>
 
     </>
   )
