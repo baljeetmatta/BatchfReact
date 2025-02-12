@@ -56,14 +56,17 @@
 import Banner from './Banner';
 import GreetClass from './GreetClass'
 import Login from './Login';
+import Parent from './Parent';
+import Text from "./Text"
 function App()
 {
   return (
     <>
     {/* <GreetClass name="Code"/> */}
     {/* <Login/> */}
-    <Banner/>
-
+    {/* <Banner/> */}
+    {/* <Text/> */}
+<Parent/>
     </>
   )
 }
