@@ -33,6 +33,7 @@ type UserType={
     email:string
 }
 const Login=()=>{
+   // const location=useLocation();
 
     const [isLoggedIn,setLogin]=useState(false);
     // const [user,setUser]=useState<UserType|null>(null);
@@ -52,6 +53,7 @@ const Login=()=>{
     }
     return (
         <>
+{/* {location.state?.data} */}
         {isLoggedIn?'Login':'Logout'}
         {user?.name} {user?.email}
         {/* <button onClick={()=>{setLogin(true)}}>Login</button>

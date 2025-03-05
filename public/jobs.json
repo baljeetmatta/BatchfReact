@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "First Job",
+        "description": "some description",
+        "package": "18L-20L"
+    },
+    {
+        "id": 2,
+        "title": "Software Engineer",
+        "description": "Develop software applications",
+        "package": "25L-30L"
+    },
+    {
+        "id": 3,
+        "title": "Data Scientist",
+        "description": "Analyze and interpret complex data",
+        "package": "22L-26L"
+    },
+    {
+        "id": 4,
+        "title": "Project Manager",
+        "description": "Oversee project teams and timelines",
+        "package": "20L-25L"
+    },
+    {
+        "id": 5,
+        "title": "UX Designer",
+        "description": "Design user interfaces and experiences",
+        "package": "15L-18L"
+    },
+    {
+        "id": 6,
+        "title": "Quality Analyst",
+        "description": "Ensure product quality through testing",
+        "package": "12L-15L"
+    },
+    {
+        "id": 7,
+        "title": "System Administrator",
+        "description": "Manage and maintain IT systems",
+        "package": "20L-22L"
+    },
+    {
+        "id": 8,
+        "title": "Business Analyst",
+        "description": "Analyze business processes and requirements",
+        "package": "18L-22L"
+    },
+    {
+        "id": 9,
+        "title": "HR Manager",
+        "description": "Manage recruitment and employee relations",
+        "package": "17L-20L"
+    },
+    {
+        "id": 10,
+        "title": "Marketing Specialist",
+        "description": "Develop marketing strategies and campaigns",
+        "package": "14L-17L"
+    }
+]

@@ -1,93 +1,172 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import Jobs, { JobsData } from "./Jobs";
+import Navbar from "./components/Navbar";
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+//import jsondata from "./jobs.json"
+const router=createBrowserRouter([
+  {
+    path:"/",
+    element:<Home/>
+  },
+  {
+    path:"/about",
+    element:<About/>
+  },
+  {
+  
+    path:"/jobs",
+    element:<Jobs/>,
+    loader:JobsData
+  },
 
-// import testdata from './data.json';
-// import Code,{Test} from './Greet'
-// function App() {
-// let data="value from script";
-// let arrayData:string[]=["name1","name2"];
-// let obj:{name:string,age:number}={
-//   name:"Name",
-//   age:30
-// }
-// type objectType={
-//   name:string,
-//   age:number
-// }
-// let objarray:objectType[]=testdata;
 
-// // let objarray:objectType[]=[
-// //   {
-// //     name:"First",
-// //     age:20
-// //   },
-// //   {
-// //     name:"Second",
-// //     age:30
-// //   }
-// // ]
-
-//   // return (
-//   //  <>
-//   //     <div >
-//   //       Welcome to React {data} {obj.name}
-//   //     </div>
-//   //     {
-//   //       arrayData.map((item)=>{
-//   //         return <p>{item}</p>
-//   //       })
-//   //     }
-//   //     {
-//   //       objarray.map((item)=>{
-//   //        return  <p>{item.name} - {item.age}</p>
-//   //       })
-//   //     }
-
-      
-//   //   </>
-//   // )
-//   return (
-//     <>
-//     <div>App Component</div>
-//     <Test/>
-
-//     </>
-//   )
-// }
-//import './App.css'
-import Banner from './Banner';
-import GreetClass from './GreetClass'
-import Login from './Login';
-import Parent from './Parent';
-import Text from "./Text"
-function App()
-{
+])
+function App(){
   return (
     <>
-    {/* <GreetClass name="Code"/> */}
-    {/* <Login/> */}
-    {/* <Banner/> */}
-    {/* <Text/> */}
-<Parent/>
+   
+    <RouterProvider router={router}/>
+
     </>
   )
 }
 export default App;
-// import Greeting from './Greeting'
-// import Inner from './Inner'
-// import jsondata from './data.json'
+// // import testdata from './data.json';
+// // import Code,{Test} from './Greet'
+// // function App() {
+// // let data="value from script";
+// // let arrayData:string[]=["name1","name2"];
+// // let obj:{name:string,age:number}={
+// //   name:"Name",
+// //   age:30
+// // }
+// // type objectType={
+// //   name:string,
+// //   age:number
+// // }
+// // let objarray:objectType[]=testdata;
 
+// // // let objarray:objectType[]=[
+// // //   {
+// // //     name:"First",
+// // //     age:20
+// // //   },
+// // //   {
+// // //     name:"Second",
+// // //     age:30
+// // //   }
+// // // ]
+
+// //   // return (
+// //   //  <>
+// //   //     <div >
+// //   //       Welcome to React {data} {obj.name}
+// //   //     </div>
+// //   //     {
+// //   //       arrayData.map((item)=>{
+// //   //         return <p>{item}</p>
+// //   //       })
+// //   //     }
+// //   //     {
+// //   //       objarray.map((item)=>{
+// //   //        return  <p>{item.name} - {item.age}</p>
+// //   //       })
+// //   //     }
+
+      
+// //   //   </>
+// //   // )
+// //   return (
+// //     <>
+// //     <div>App Component</div>
+// //     <Test/>
+
+// //     </>
+// //   )
+// // }
+// //import './App.css'
+// import { createBrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom';
+// import Banner from './Banner';
+// import GreetClass from './GreetClass'
+// import Login from './Login';
+// import Parent from './Parent';
+// import Text from "./Text"
+// import Home from './components/Home';
+// import About from './components/About';
+// import Contact from './components/Contact';
+// import Navbar from './components/Navbar';
+// const router=createBrowserRouter([
+//   {
+//     path:"/",
+//     element:<Home/>
+
+//   },
+//   {
+//     path:"/about",
+//     element:<About/>
+
+//   },
+//   {
+//     path:"/contact",
+//     element:<Contact/>
+
+//   }
+
+// ])
 // function App()
 // {
 //   return (
 //     <>
-//     <div>App Component</div>
-//     <Greeting name="Chitkara" years={10} data={jsondata[0]}/>
-//     <Greeting name="CodeQuotient">
-//         <Inner/>
-        
-//       </Greeting>
+//     {/* <GreetClass name="Code"/> */}
+//     {/* <Login/> */}
+//     {/* <Banner/> */}
+//     {/* <Text/> */}
+//     {/* <Parent/>
+// <Routes>
+//     <Route path="/" element={<div>Home Page</div>}></Route>
+//     <Route path="/text" element={<Text/>}/>
 
-   
-//        </>
+// </Routes> */}
+// <Navbar/>
+
+// <RouterProvider router={router}/>
+
+// {/* 
+// <Routes>
+// <Route path="/" index element={<Home/>}/>
+// <Route path="/about" element={<About/>}/>
+// <Route path="/contact" element={<Contact/>}/>
+// <Route path="/login" element={<Login/>}/>
+// <Route path="/greet/:id" element={<Text/>}/>
+
+
+//   </Routes> */}
+
+
+//     </>
 //   )
 // }
-// export default App
+// export default App;
+// // import Greeting from './Greeting'
+// // import Inner from './Inner'
+// // import jsondata from './data.json'
+
+// // function App()
+// // {
+// //   return (
+// //     <>
+// //     <div>App Component</div>
+// //     <Greeting name="Chitkara" years={10} data={jsondata[0]}/>
+// //     <Greeting name="CodeQuotient">
+// //         <Inner/>
+        
+// //       </Greeting>
+
+   
+// //        </>
+// //   )
+// // }
+// // export default App

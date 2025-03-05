@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
+import { BrowserRouter } from 'react-router-dom'
 //import Button from './Button.tsx'
 //import Controls from './Controls.tsx'
 // const clickHandlerSend=(e:React.MouseEvent)=>{
@@ -23,7 +24,9 @@ createRoot(document.getElementById('root')!).render(
     {/* <App /> */}
     {/* <Button value="Send" click={clickHandler}/>
     <Button value="Click" click={clickHandler}/> */}
+   
     <App/>
+    {/* </BrowserRouter> */}
     {/* <Controls/> */}
   </StrictMode>,
 )

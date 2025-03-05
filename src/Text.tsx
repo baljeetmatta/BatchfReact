@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Text=()=>{
     //let textData="";
+    const {id}=useParams();
     const [textData,setText]=useState("");
 
     const changeHandler=(e:React.ChangeEvent)=>{
@@ -23,6 +25,7 @@ const Text=()=>{
     return (
 
         <>
+        {id}
         <input type="text" onChange={changeHandler} value={textData}/>
         <button onClick={printHandler}>Print</button>
         <button onClick={updateHandler}>Change</button>
