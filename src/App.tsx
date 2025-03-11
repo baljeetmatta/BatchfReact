@@ -5,6 +5,8 @@ import Jobs, { JobsData } from "./Jobs";
 import Navbar from "./components/Navbar";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import JobDetails, { fetchJobDetails } from "./components/JobDetails";
+import Posts from "./components/Posts";
 //import jsondata from "./jobs.json"
 const router=createBrowserRouter([
   {
@@ -21,6 +23,16 @@ const router=createBrowserRouter([
     element:<Jobs/>,
     loader:JobsData
   },
+  {
+  
+    path:"/jobdetails/:id",
+    element:<JobDetails/>,
+    loader:fetchJobDetails
+  },
+  {
+    path:"/posts",
+    element:<Posts/>
+  }
 
 
 ])

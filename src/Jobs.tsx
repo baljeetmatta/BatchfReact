@@ -1,5 +1,6 @@
+import { NavLink } from "react-router-dom";
 import { useLoaderData, useLocation } from "react-router-dom";
-type jsonType = {
+export type jsonType = {
     id: number,
     title: string,
     description: string,
@@ -19,7 +20,7 @@ const Jobs = () => {
                             return (
                                 <div  className=" bg-gray-200">
                                     <div>
-                                        {item.title}
+                                      <NavLink to={`/jobdetails/${item.id}`}>  {item.title}</NavLink>
                                     </div>
                                     <div>
                                         {item.description}
@@ -38,11 +39,11 @@ export default Jobs;
 export const JobsData = async () => {
     //return "hi";
     //double promises
-    // const data = await fetch("/jobs.json") //return structured data
-    // const response = data.json();
-    // return response;
-    const data=await fetch("https://dummyjson.com/products");
-    const response=await data.json();
-    return response.products;
+    const data = await fetch("/jobs.json") //return structured data
+    const response = data.json();
+    return response;
+    // const data=await fetch("https://dummyjson.com/products");
+    // const response=await data.json();
+    // return response.products;
 
 }
