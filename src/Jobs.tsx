@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useLoaderData, useLocation } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 export type jsonType = {
     id: number,
     title: string,

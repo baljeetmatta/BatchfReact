@@ -24,8 +24,9 @@ createRoot(document.getElementById('root')!).render(
     {/* <App /> */}
     {/* <Button value="Send" click={clickHandler}/>
     <Button value="Click" click={clickHandler}/> */}
-   
+   <BrowserRouter>
     <App/>
+    </BrowserRouter>
     {/* </BrowserRouter> */}
     {/* <Controls/> */}
   </StrictMode>,
