@@ -238,7 +238,7 @@ function reducer(state=[],actions){
     {
             const updateState=state.map((item)=>{
                 if(item.id==actions.payload.id)
-                    item.resolved=true;
+                    item.resolved=true;                                                                                     
 
                 return item;
             })

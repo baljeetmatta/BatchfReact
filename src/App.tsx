@@ -29,6 +29,8 @@ import LoginScreen from "./components/LoginScreen";
 import { useState } from "react";
 import { UserContext, UserType } from "./components/UserContext";
 import PrivateRoute from "./components/PrivateRoute";
+import BugApp from "./components/BugApp";
+import { PersistGate } from "redux-persist/lib/integration/react";
 
   
 //     path:"/jobs",
@@ -194,7 +196,7 @@ import PrivateRoute from "./components/PrivateRoute";
 // // //   )
 // // // }
 // // // export default App
-
+import { pstore } from "./components/BugStore";
 function App()
 {
   const [name,setName]=useState<string|null>(null);
@@ -203,6 +205,7 @@ function App()
     return (
       <>
       Username :{name}
+      <PersistGate persistor={pstore}>
       <UserContext.Provider value={{name,setName}}>
 
      
@@ -213,17 +216,21 @@ function App()
       
       <li><NavLink to="/about">About</NavLink></li>
       <li><NavLink to="/contact">Contact</NavLink></li>
+      <li><NavLink to="/bugs">Bugs</NavLink></li>
       </ul>
       <Routes>
         <Route path="/" index element={<Home/>}/>
         <Route path="/login" element={<LoginScreen/>}/>
+        <Route path="/bugs" element={<BugApp/>}/>
         <Route path="/" element={<PrivateRoute><Outlet/></PrivateRoute>} >
         <Route path="about" element={<About/>}/>
         <Route path="contact" element={<Contact/>}/>
+       
+
         </Route>
       </Routes>
       </UserContext.Provider>
-      
+      </PersistGate>
       </>
     )
 
